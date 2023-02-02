@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--#include virtual="/html/include/head.html"-->
+<body class="sub_body">
+<!-- ## skip ## -->
+<section class="wrapper">
+
+	<!-- :: header s :: -->
+	<!--#include virtual="/html/include/header.html"-->
+	<!-- :: header e :: -->
+
+	<!-- :: sub-top s :: -->
+	<!--#include virtual="/html/include/subTop.html"-->
+	<!-- :: sub-top e :: -->
+	<section class="contents sub_contents_box sub_contents_box04">
+		<!--  1뎁스 메뉴에 맞게 밑에 있는 클래스로 바꿔주세요.  -->
+		<!-- :: sub_contents_box01 :: -->
+		<!-- :: sub_contents_box02 :: -->
+		<!-- :: sub_contents_box03 :: -->
+		<!-- :: sub_contents_box04 :: -->
+		<!-- :: sub_contents_box05 :: -->
+		<div class="sub_container">
+			<div class="sub_cont_tit_box">
+				<div class="sub_tit">인증</div>
+				<div class="sub_location">
+					<ul>
+						<li>
+							<img src="/front/images/layout/sub_tit_icon.png" alt="">
+						</li>
+						<li>새소식</li>
+						<li>인증</li>
+					</ul>
+				</div>
+			</div>
+			<div class="notice_box sub_cont_box">
+				<div class="awards_box">
+					<div class="search-form-wrap opt-clearfix">
+						<div class="search-form-box">
+							<div class="search-form-select">
+								<select title="검색조건 선택">
+									<option value="0">제목</option>
+									<option value="1">내용</option>
+								</select>
+							</div>
+							<div class="search-form-inp">
+								<input type="text" title="검색어 입력" placeholder="검색어를 입력하세요">
+							</div>
+							<div class="search-form-btn">
+								<button type="button" title="검색하기"><img src="/front/images/layout/search-ico-btn.png" alt="검색"></button>
+							</div>
+						</div>
+					</div>
+					<div class="awards_list">
+						<ul class="awards_item">
+							<li>
+								<div class="awards_wrap">
+									<div class="img_box">
+										<div class="img_inner">
+											<img src="/front/images/sub/popupex.png" alt="">
+										</div>
+									</div>
+									<div class="tit">중소벤처기업부 창업기업확인서</div>
+									<button type="button" class="awards_link js-popup-btn" data-popup="awards_slide_popup"></button>
+								</div>
+							</li>
+							<li>
+								<div class="awards_wrap">
+									<div class="img_box">
+										<div class="img_inner">
+											<img src="/front/images/sub/popupex.png" alt="">
+										</div>
+									</div>
+									<div class="tit">중소벤처기업부 창업기업확인서</div>
+									<button type="button" class="awards_link js-popup-btn" data-popup="awards_slide_popup"></button>
+								</div>
+							</li>
+							<li>
+								<div class="awards_wrap">
+									<div class="img_box">
+										<div class="img_inner">
+											<img src="/front/images/sub/popupex.png" alt="">
+										</div>
+									</div>
+									<div class="tit">중소벤처기업부 창업기업확인서</div>
+									<button type="button" class="awards_link js-popup-btn" data-popup="awards_slide_popup"></button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--	버튼안 숫자는 확인용 입니다.. s -->
+	<div class="popup js-popup awards_slide_popup" data-popup="awards_slide_popup">
+		<div class="popup-wrap">
+			<div class="popup-box">
+				<div class="popup-cont" tabindex="0">
+					<div class="swiper-container awards_slide js_awards_slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="btn_box">
+									1<button type="button" class="close_btn js-popup-close"><i class="fa-solid fa-xmark"></i></button>
+								</div>
+								<img src="/front/images/sub/popup_view_img_ex.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<div class="btn_box">
+									2<button type="button" class="close_btn js-popup-close"><i class="fa-solid fa-xmark"></i></button>
+								</div>
+								<img src="/front/images/sub/popup_view_img_ex.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<div class="btn_box">
+									3<button type="button" class="close_btn js-popup-close"><i class="fa-solid fa-xmark"></i></button>
+								</div>
+								<img src="/front/images/sub/popup_view_img_ex.png" alt="">
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn prev_btn js_awards_slide_prev" title="prev"><i class="fa-solid fa-chevron-left"></i></button>
+					<button type="button" class="btn next_btn js_awards_slide_next" title="next"><i class="fa-solid fa-chevron-right"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	버튼안 숫자는 확인용 입니다.. e -->
+	<script>
+        (function($) {
+
+                var $btn = $('.js-popup-btn'),
+                    $body = $('body');
+
+                $btn.on('click', function () {
+                    var $this = $(this),
+                        $thisData = $this.data('popup'),
+                        $cont = $('*[data-popup="'+$thisData+'"]');
+                    $cont.addClass('active').focus();
+                    $body.addClass('scroll-hidden');
+
+                    $cont.find('.js-popup-close').on('click', function() {
+                        $cont.removeClass('active');
+                        $body.removeClass('scroll-hidden');
+                    });
+
+                    var index = $this.closest('li').index();
+
+                    console.log(index);
+
+                    var b = new Swiper('.js_awards_slide', {
+                        loop: false,
+                        navigation: {
+                            prevEl: '.js_awards_slide_prev',
+                            nextEl: '.js_awards_slide_next',
+                        },
+                        autoplay: false, // 슬라이드 자동 설정,
+                        observer: true,
+                        observeParents: true,
+                        initialSlide: index
+                    });
+
+                });
+
+
+
+
+        })(jQuery);
+	</script>
+	<!-- :: footer s :: -->
+	<!--#include virtual="/html/include/footer.html"-->
+	<!-- :: footer e :: -->
+
+</section>
+<script>
+
+</script>
+</body>
+</html>

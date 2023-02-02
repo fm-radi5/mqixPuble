@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>엠퀵스</title>
+
+	<style>
+        * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+        html {margin:0;padding:0; }
+        body {margin:0; padding:0;font-size:14px;line-height:1.5;color:#464646;letter-spacing:0;-webkit-text-size-adjust:none;}
+        div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,input,table,tr,th,td,button,textarea,select {margin:0;padding:0;}
+        h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal}
+        img {border:0;vertical-align:top;}
+        hr { display: none;}
+        ul,ol,dl,dt,dd,li {list-style:none;}
+        table, th, td {border-collapse:collapse;border-spacing:0;font-weight: normal;}
+        caption {display:block;text-indent:-9999em;overflow:hidden;height:0;font-size:0;line-height:0;}
+        fieldset, blockquote, iframe, button {border:none;}
+        i, em, u, cite {font-style:normal;}
+        strong,em, b {font-weight:700; font-size: 15px;}
+        a {color:#464646;}
+        button {background:transparent;cursor:pointer;vertical-align:middle;margin:0;padding:0;font-size:14px;line-height:1.5;color:#464646;letter-spacing:0;-webkit-text-size-adjust:none;}
+        section, nav, article, aside, header, footer, main {display:block;}
+        span {font-size: 13px;}
+
+        table {width:100%; max-width:1200px; margin:10px auto 50px; border-top:2px solid #838383; text-align: center;}
+        th {padding:10px; background-color: #fcfcfc; color: #4d4c48; font-weight:700; border-left:1px solid #ebeced;}
+        th:first-child {border-left:none;}
+        tr {border-bottom:1px solid #ebeced;}
+        td { padding: 10px; color: #757575; border-right:1px solid #ebeced;}
+        td:last-child {border-right:none;}
+        td a {color: #757575;}
+        h1 {font-size:25px; text-align:center; color:#f26521; margin:30px 0;}
+        h1 span {font-size:20px;}
+        h2 {width:95%; margin:0 auto; font-size:18px; font-weight: 700; color: #000;}
+        .red {color: #ff0000;}
+        .blue {color:#0000ff;}
+        .tl {text-align: left;}
+        .category-food {background:#eaf9ea;}
+        .category-food-box {max-width: 1200px; margin: 0 auto 10px; text-align: right;}
+        .category-food-box .box {display: inline-block; vertical-align: middle; background:#eaf9ea; width:22px; height:22px; border:1px solid #b8e2b8; margin:-2px 5px 0 0;}
+        .category-food-box .tit {color: #005200; font-weight: 600; font-size: 16px;}
+        .bg-blue {background: #e4f4f7;}
+        .bg-purple {background: #f4e6fb;}
+        .bg-yellow {background: #fcfcf3;}
+	</style>
+</head>
+<body>
+<h1 style="color: #1348D0;">엠퀵스 메뉴구조도</h1>
+<table>
+	<caption>엠퀵스 메뉴구조도</caption>
+	<colgroup>
+		<col style="width:10%;">
+		<col style="width:15%;">
+		<col style="width:15%;">
+		<col style="width:15%;">
+		<col style="width:30%;">
+		<col style="width:15%;">
+	</colgroup>
+	<thead>
+	<tr>
+		<th scope="col">구분</th>
+		<th scope="col">1DEPTH</th>
+		<th scope="col">2DEPTH/기타</th>
+		<th scope="col">3DEPTH/기타</th>
+		<th scope="col">URL</th>
+		<th scope="col">기타</th>
+
+	</tr>
+	</thead>
+	<tbody>
+		<tr class="">
+			<td rowspan="">메인</td>
+			<td rowspan="">메인</td>
+			<td></td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/main/main.html" target="_blank">/html/main/main.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="16">서브</td>
+			<td rowspan="5">회사소개</td>
+			<td>회사소개</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/aboutUs/aboutUs.html" target="_blank">/html/sub/aboutUs/aboutUs.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>ceo 인사말</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/aboutUs/greetings.html" target="_blank">/html/sub/aboutUs/greetings.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>연혁</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/aboutUs/history.html" target="_blank">/html/sub/aboutUs/history.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>CI</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/aboutUs/ci.html" target="_blank">/html/sub/aboutUs/ci.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>오시는 길</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/aboutUs/location.html" target="_blank">/html/sub/aboutUs/location.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="4">제품소개</td>
+			<td>제품소개</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/product/productList.html" target="_blank">/html/sub/product/productList.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>코비드 19</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/product/covid.html" target="_blank">/html/sub/product/covid.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>인플루엔자 A/B</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/product/influenza.html" target="_blank">/html/sub/product/influenza.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>기타</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="#lnk" target="_blank"></a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="3">연구개발</td>
+			<td>연구소</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/rnd/laboratory.html" target="_blank">/html/sub/rnd/laboratory.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>연구개발활동</td>
+			<td class="red">연구기획팀</td>
+			<td class="tl">
+				<a href="/html/sub/rnd/activities1.html" target="_blank">/html/sub/rnd/activities1.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>연구개발활동</td>
+			<td class="red">면역진단개발팀</td>
+			<td class="tl">
+				<a href="/html/sub/rnd/activities2.html" target="_blank">/html/sub/rnd/activities2.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="2">새소식</td>
+			<td>뉴스</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/news/news.html" target="_blank">/html/sub/news/news.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="2">인증</td>
+			<td>뉴스</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/news/certificationList.html" target="_blank">/html/sub/news/certificationList.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>공지사항</td>
+			<td class="red">
+				목록<br>보기
+			</td>
+			<td class="tl">
+				<a href="/html/sub/news/noticeList.html" target="_blank">/html/sub/news/noticeList.html</a><br>
+				<a href="/html/sub/news/noticeVieew.html" target="_blank">/html/sub/news/noticeVieew.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td rowspan="2">고객지원</td>
+			<td>문의하기</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/customer/contactUs.html" target="_blank">/html/sub/customer/contactUs.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+		<tr class="">
+			<td>자료실</td>
+			<td class="red"></td>
+			<td class="tl">
+				<a href="/html/sub/customer/referenceRoom.html" target="_blank">/html/sub/customer/referenceRoom.html</a>
+			</td>
+			<td class="red"></td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

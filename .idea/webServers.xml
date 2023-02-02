@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bfde9e26-c9ab-47bc-9492-4741b3cb6174" name="mqix" url="http://localhost:8071">
+        <fileTransfer mountedRoot="E:\workspace\mqix" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

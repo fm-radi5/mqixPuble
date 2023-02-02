@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--#include virtual="/html/include/head.html"-->
+<body class="sub_body">
+<!-- ## skip ## -->
+<section class="wrapper">
+
+	<!-- :: header s :: -->
+	<!--#include virtual="/html/include/header.html"-->
+	<!-- :: header e :: -->
+
+	<!-- :: sub-top s :: -->
+	<!--#include virtual="/html/include/subTop.html"-->
+	<!-- :: sub-top e :: -->
+	<section class="contents sub_contents_box sub_contents_box01">
+		<!--  1뎁스 메뉴에 맞게 밑에 있는 클래스로 바꿔주세요.  -->
+		<!-- :: sub_contents_box01 :: -->
+		<!-- :: sub_contents_box02 :: -->
+		<!-- :: sub_contents_box03 :: -->
+		<!-- :: sub_contents_box04 :: -->
+		<!-- :: sub_contents_box05 :: -->
+		<div class="sub_container">
+			<div class="sub_cont_tit_box">
+				<div class="sub_tit">오시는 길</div>
+				<div class="sub_location">
+					<ul>
+						<li>
+							<img src="/front/images/layout/sub_tit_icon.png" alt="">
+						</li>
+						<li>회사소개</li>
+						<li>오시는 길</li>
+					</ul>
+				</div>
+			</div>
+			<div class="location_box sub_cont_box">
+				<div class="location_list">
+					<div class="txt_box">
+						<address>본점 : 강원도 춘천시 동내면 거두단지 1길 22 (주)하울바이오</address>
+						<ul>
+							<li>
+								<div class="tit">T</div>
+								<div class="desc">033-251-8511</div>
+							</li>
+							<li>
+								<div class="tit">F</div>
+								<div class="desc">033-251-8512</div>
+							</li>
+						</ul>
+					</div>
+					<div id="map01" class="map"></div>
+				</div>
+				<div class="location_list">
+					<div class="txt_box">
+						<address>지점 : 강원도 춘천시 소양강로 32 바이오타운 BIO-1 405호, 416호</address>
+						<ul>
+							<li>
+								<div class="tit">T</div>
+								<div class="desc">033-258-6411</div>
+							</li>
+							<li>
+								<div class="tit">F</div>
+								<div class="desc">033-258-6414</div>
+							</li>
+						</ul>
+					</div>
+					<div id="map02" class="map"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=791f08c3d92188390596696ab206a2bd&libraries=services"></script>
+	<script>
+        var mapContainer = document.getElementById('map01'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('강원도 춘천시 동내면 거두단지 1길 22 (주)하울바이오', function(result, status) {
+
+            // 정상적으로 검색이 완료됐으면
+            if (status === kakao.maps.services.Status.OK) {
+
+                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                var marker = new kakao.maps.Marker({
+                    map: map,
+                    position: coords
+                });
+
+                // 인포윈도우로 장소에 대한 설명을 표시합니다
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: '<div style="width:150px;text-align:center;padding:6px 0;">하울바이오</div>'
+                });
+                infowindow.open(map, marker);
+
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map.setCenter(coords);
+            }
+        });
+
+        var mapContainer2 = document.getElementById('map02'), // 지도를 표시할 div
+            mapOption2 = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 생성합니다
+        var map2 = new kakao.maps.Map(mapContainer2, mapOption2);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder2 = new kakao.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder2.addressSearch('강원도 춘천시 소양강로 32 바이오타운 BIO-1 405호, 416호', function(result, status) {
+
+            // 정상적으로 검색이 완료됐으면
+            if (status === kakao.maps.services.Status.OK) {
+
+                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                var marker = new kakao.maps.Marker({
+                    map2: map2,
+                    position: coords
+                });
+
+                // 인포윈도우로 장소에 대한 설명을 표시합니다
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: '<div style="width:200px;text-align:center;padding:6px 0;">강원도 춘천시 소양강로 32</div>'
+                });
+                infowindow.open(map2, marker);
+
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map2.setCenter(coords);
+            }
+        });
+	</script>
+	<!-- :: footer s :: -->
+	<!--#include virtual="/html/include/footer.html"-->
+	<!-- :: footer e :: -->
+
+</section>
+
+</body>
+</html>
